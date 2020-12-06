@@ -391,3 +391,193 @@ static：类变量，类方法，属于类。static的东西在对象之前，�
 //	Integer.toBinaryString();2进制
 //	Integer.toHexString(i);16
 //	Integer.toOctalString(i);8
+
+## 11.9
+
+继承的本质：包裹模型
+
+![img](file:///C:\Users\LENOVO\Documents\Tencent Files\1242884655\Image\C2C\9C2A88C0526E6133185C1C7D700F869B.jpg)
+
+无论是cat，animal，homecat都是指的是一个this 
+
+若cat,animal,homecat的构造函数中都有this，这个this指的是最外层的homecat的this，而homecat，他们赋值赋的都是同一个name。
+
+csv
+
+### 11.16
+
+```java
+Animal a = new Dog();
+a.say();
+if(a instanceof Dog)
+    ((Dog)a).watchDoor();
+//编译时的type，运行时的type
+System.out.println("finish");
+```
+
+ 内部类
+
+- static内部类（类内部类）
+
+- 成员内部类
+
+  可以直接访问外面的属性和方法
+
+类完整名 com.weifengpan.xx$内部类名
+
+```
+System.out.prinln(new Animal(){
+public void say(){};
+public void walk(){}; 
+});
+```
+
+### 数组
+
+默认初始化 `int[] c = new int[3]`
+
+静态初始化`int[] e = {0,1,2}`
+
+c语言中数组是常量，而java中数组是变量
+
+java中与c语言中数组的区别
+
+names.lenth是通过native实现的
+
+增强for循环
+
+```java
+for(String s:names)
+{
+ 
+}
+//双重循环
+for(int[] i:b)
+{
+
+}
+```
+
+resize
+
+`int[][] b= new int [3][];`
+
+无返回值必须写void
+
+实惨列表和形参列表要匹配
+
+数据传递
+
+{int a=3};
+
+{int a=4};
+
+两个块内不冲突
+
+## 11.23
+
+String charAt (int index) 返回指定**索引（从0开始）**的char
+
+call hierarchy 是确定
+
+static类
+
+享元
+
+string的源码
+
+# Java String indexOf() 方法
+
+------
+
+indexOf() 方法有以下四种形式：
+
+- **public int indexOf(int ch):** 返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。
+- **public int indexOf(int ch, int fromIndex):** 返回从 fromIndex 位置开始查找指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。
+- **int indexOf(String str):** 返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。
+- **int indexOf(String str, int fromIndex):** 返回从 fromIndex 位置开始查找指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。
+
+```java
+public class 数组的自增 {
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+
+        // 静态数组
+        int [] staticArray = {1, 2, 3, 4, 5, 6, 0};
+
+        System.out.println("请输入你要插入的数字：");
+        int item = sc.nextInt();
+
+        // 添加数据
+        staticArray = addItemToArray(staticArray, item);
+        staticArray = addItemToArray(staticArray, item);
+        // 输出数组
+        printIntArray(staticArray);
+
+
+    }
+
+```
+
+```java
+//字符串分割
+String str = "www-runoob-com";
+      String[] temp;
+      String delimeter = "-";  // 指定分割字符
+      temp = str.split(delimeter); // 分割字符串
+      // 普通 for 循环
+      for(int i =0; i < temp.length ; i++){
+         System.out.println(temp[i]);
+         System.out.println("");
+      }
+```
+
+## 11.30
+
+String
+
+- all
+
+Array
+
+- equal
+- fill
+- toString
+- copyof
+
+Math
+
+- random
+
+Scanner
+
+- 需要额外添加包util
+
+字符串拼接容易产生垃圾
+
+StringBuffer
+
+synchronized 同步处理
+
+集合（collection）vector arraylist hashset hashmap iterator
+
+hashset
+
+
+
+自动装箱，自动拆箱
+
+`HashSet<Student>`
+
+容器：容纳别人的器；
+
+- collection
+  - set
+    - HashSet
+  - list
+    - ArrayList
+- Map
+  - HashMap
+
+
+

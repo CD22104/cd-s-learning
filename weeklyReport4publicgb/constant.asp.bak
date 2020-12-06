@@ -1,0 +1,8 @@
+<%@ CODEPAGE=936 %>
+<%Response.Charset="GB2312"%>
+
+<!-- (注释)此文件由 GB2UTF8 1.2 Beta 生成于 2009-3-31 12:46:59，软件作者：阿勇(fxy_2002@163.com) pc-soft.cn -->
+<%
+progressDb="progress.mdb"
+memberDb="member.mdb"
+%>
