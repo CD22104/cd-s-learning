@@ -581,3 +581,14 @@ hashset
 
 
 
+
+
+## 12.7
+
+try...catch语句在try中若有返回，也会将后面执行完，到finally若有值需要返回则覆盖原来值
+
+发生异常后，异常下一句不会被执行
+
+![image-20201207115457976](C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20201207115457976.png)
+
+![image-20201207115739942](C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20201207115739942.png)
